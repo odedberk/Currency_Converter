@@ -1,0 +1,4 @@
+{
+  "apiAddress": "https://api.ratesapi.io/api/latest?base=",
+  "converterClass": "RESTConverter"
+}
