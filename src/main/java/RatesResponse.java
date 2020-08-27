@@ -1,9 +1,12 @@
 import java.util.Map;
 
+/**
+ * An object holding the currency rates data received from the API
+ */
 public class RatesResponse {
-    private String base;
-    private Map<String, Double> rates;
-    private String date;
+    private String base; //currency to convert from
+    private Map<String, Double> rates; // <"USD", 3.5">
+    private String date; //updated at..
 
     public String getBase() {
         return base;
@@ -13,6 +16,11 @@ public class RatesResponse {
         return rates;
     }
 
+    /**
+     * Return a specific rate from the data
+     * @param target currency to convert to
+     * @return daily rate value
+     */
     public Double getRate(String target){
         return rates.get(target);
     }

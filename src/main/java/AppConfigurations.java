@@ -4,6 +4,11 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 
+/**
+ * Singleton class.
+ * Takes care of all of the configurations needed for the application to run.
+ * Creates the correct instances for the dependency injections based on the configurations file.
+ */
 public class AppConfigurations {
 
     private static AppConfigurations instance;

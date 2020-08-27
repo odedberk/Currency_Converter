@@ -7,7 +7,9 @@ import org.apache.http.impl.client.*;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-
+/**
+ * A Converter using the REST API for receiving daily exchange rates
+ */
 public class RESTConverter implements Converter {
     private String baseURL;
 
@@ -15,6 +17,11 @@ public class RESTConverter implements Converter {
         this.baseURL = baseURL;
     }
 
+    /**
+     * Send a GET request to receive the data from the server
+     * @param base currency to convert from
+     * @return
+     */
     public RatesResponse getRates(String base) {
         String rates = "";
         try {
