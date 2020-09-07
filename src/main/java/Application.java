@@ -1,4 +1,8 @@
+import sun.awt.image.ImageWatched;
+
 import java.io.*;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -6,7 +10,6 @@ public class Application {
     private static AppConfigurations configs = AppConfigurations.getInstance();
 
     public static void main(String[] args) {
-
         try {
             File file = new File(args[0]); //arg[0] - text file - {"base currency \n target currency \n amounts"}
             BufferedReader reader = new BufferedReader(new FileReader(file));
@@ -22,12 +25,10 @@ public class Application {
             Converter converter = configs.getConverter();
             RatesResponse response = converter.getRates(base);
             double rate = response.getRate(target);
-            for (Double number :
-                    amounts)
+            for (Double number : amounts)
                 results.add(number*rate);
 
-            for (Double result :
-                    results)
+            for (Double result : results)
                 System.out.println(String.format("%.2f",result));
 
 

@@ -12,7 +12,6 @@ import java.io.InputStreamReader;
  */
 public class RESTConverter implements Converter {
     private String baseURL;
-
     public void setBaseURL(String baseURL) {
         this.baseURL = baseURL;
     }
