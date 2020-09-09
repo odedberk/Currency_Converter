@@ -1,10 +1,7 @@
 import sun.awt.image.ImageWatched;
 
 import java.io.*;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Application {
     private static AppConfigurations configs = AppConfigurations.getInstance();
